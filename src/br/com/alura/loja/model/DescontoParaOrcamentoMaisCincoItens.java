@@ -2,7 +2,7 @@ package br.com.alura.loja.model;
 
 import java.math.BigDecimal;
 
-public class DescontoParaOrcamentoMaisCincoItens extends Desconto{
+public class DescontoParaOrcamentoMaisCincoItens extends Desconto {
 
 
     public DescontoParaOrcamentoMaisCincoItens(Desconto proximo) {
@@ -10,10 +10,12 @@ public class DescontoParaOrcamentoMaisCincoItens extends Desconto{
     }
 
     @Override
-    public BigDecimal calcular(Orcamento orcamento) {
-        if(orcamento.getQuantidade()>5){
-            return orcamento.getValor().multiply(new BigDecimal("0.1"));
-        }
-        return proximo.calcular(orcamento);
+    public BigDecimal efetuarCalculo(Orcamento orcamento) {
+        return orcamento.getValor().multiply(new BigDecimal("0.1"));
+    }
+
+    @Override
+    protected boolean deveAplicar(Orcamento orcamento) {
+        return orcamento.getQuantidade() > 5;
     }
 }
