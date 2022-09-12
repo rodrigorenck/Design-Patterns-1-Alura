@@ -1,13 +1,9 @@
 package br.com.alura.loja.service;
 
-import br.com.alura.loja.model.Orcamento;
-import br.com.alura.loja.model.Pedido;
-
 import java.math.BigDecimal;
-import java.time.LocalDate;
 
 /**
- * Dados
+ * Dados - como se fosse um DTO
  */
 public class GeradorDePedidos {
     private String cliente;
