@@ -6,6 +6,9 @@ import br.com.alura.loja.model.Pedido;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
+/**
+ * Dados
+ */
 public class GeradorDePedidos {
     private String cliente;
     private BigDecimal valor;
@@ -17,10 +20,15 @@ public class GeradorDePedidos {
         this.quantidade = quantidade;
     }
 
-    public void executa(){
-        Orcamento orcamento = new Orcamento(valor, quantidade);
-        Pedido pedido = new Pedido(cliente, LocalDate.now(), orcamento);
-        System.out.println("Salvar pedido no banco");
-        System.out.println("Enviar email para cliente do novo pedido");
+    public String getCliente() {
+        return cliente;
+    }
+
+    public BigDecimal getValor() {
+        return valor;
+    }
+
+    public int getQuantidade() {
+        return quantidade;
     }
 }
