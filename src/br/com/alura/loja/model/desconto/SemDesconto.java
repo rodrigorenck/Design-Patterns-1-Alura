@@ -1,11 +1,14 @@
-package br.com.alura.loja.model;
+package br.com.alura.loja.model.desconto;
+
+import br.com.alura.loja.model.Orcamento;
+import br.com.alura.loja.model.desconto.Desconto;
 
 import java.math.BigDecimal;
 
 /**
  * Representa o fim da nossa cadeia de descontos
  */
-public class SemDesconto extends Desconto{
+public class SemDesconto extends Desconto {
 
 
     public SemDesconto() {

@@ -1,6 +1,10 @@
 package br.com.alura.loja.service;
 
 import br.com.alura.loja.model.*;
+import br.com.alura.loja.model.desconto.Desconto;
+import br.com.alura.loja.model.desconto.DescontoParaOrcamentoMais500;
+import br.com.alura.loja.model.desconto.DescontoParaOrcamentoMaisCincoItens;
+import br.com.alura.loja.model.desconto.SemDesconto;
 
 import java.math.BigDecimal;
 

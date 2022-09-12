@@ -1,7 +1,7 @@
 package br.com.alura.loja;
 
-import br.com.alura.loja.model.ICMS;
-import br.com.alura.loja.model.ISS;
+import br.com.alura.loja.model.imposto.ICMS;
+import br.com.alura.loja.model.imposto.ISS;
 import br.com.alura.loja.model.Orcamento;
 import br.com.alura.loja.service.CalculadoraDeImpostos;
 
