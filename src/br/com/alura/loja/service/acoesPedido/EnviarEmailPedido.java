@@ -2,9 +2,13 @@ package br.com.alura.loja.service.acoesPedido;
 
 import br.com.alura.loja.model.Pedido;
 
-public class EnviarEmailPedido {
+/**
+ * Observer
+ */
+public class EnviarEmailPedido implements AcaoPedido {
 
-    public void executa(Pedido pedido){
+    @Override
+    public void executarAcao(Pedido pedido){
         System.out.println("Enviando email com dados do pedido - " + pedido.getCliente());
     }
 }
