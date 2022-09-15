@@ -24,6 +24,13 @@ public class Orcamento implements  Orcavel{
 
     @Override
     public BigDecimal getValor() {
+        //simulamos que para pegar o valor temos que consultar uma API externa que eh lenta
+        // entao poderemos usar o padrao Proxy para resolver esse problema
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         return valor;
     }
 
