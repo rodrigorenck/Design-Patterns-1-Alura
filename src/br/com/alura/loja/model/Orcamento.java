@@ -13,6 +13,7 @@ public class Orcamento implements  Orcavel{
     private BigDecimal valor;
     //possiveis situacoes (estados) que um orcamento pode estar
     private Situacao situacao;
+    //estrutura de arvore, orcamento pode ser composto por outro orcamento ou por itens
     private List<Orcavel> itens;
 
     public Orcamento() {

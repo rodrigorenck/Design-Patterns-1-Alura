@@ -10,6 +10,7 @@ import java.util.List;
 
 /**
  * Dependencias e execucao
+ * Usando o padrao Command e o padrao Observer - ganhando Facade de brinde
  */
 public class GeradorDePedidosHandler {
 
@@ -22,6 +23,7 @@ public class GeradorDePedidosHandler {
     /**
      * Agora quem diz quais acoes sera usadas eh quem ta chamando o metodo - inversao de controle!
      */
+    //Dentro desse metodo nos encapsulamos a complexidade -> usamos outro padrao sem nem perceber - o Facade
     public void executa(List<AcaoPedido> acoes){
         ItemOrcamento item = new ItemOrcamento(dados.getValor(), dados.getQuantidade());
         Orcamento orcamento = new Orcamento();
