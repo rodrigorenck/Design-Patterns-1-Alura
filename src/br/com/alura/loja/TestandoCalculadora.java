@@ -1,5 +1,6 @@
 package br.com.alura.loja;
 
+import br.com.alura.loja.model.ItemOrcamento;
 import br.com.alura.loja.model.imposto.ICMS;
 import br.com.alura.loja.model.imposto.ISS;
 import br.com.alura.loja.model.Orcamento;
@@ -10,7 +11,9 @@ import java.math.BigDecimal;
 public class TestandoCalculadora {
 
     public static void main(String[] args) {
-        Orcamento orcamento = new Orcamento(new BigDecimal("100"), 1);
+        ItemOrcamento item = new ItemOrcamento(new BigDecimal("100"), 1);
+        Orcamento orcamento = new Orcamento();
+        orcamento.adicionarItem(item);
         CalculadoraDeImpostos calculadoraDeImpostos = new CalculadoraDeImpostos();
         BigDecimal val = calculadoraDeImpostos.calcular(orcamento, new ICMS());
         System.out.println(calculadoraDeImpostos.calcular(orcamento, new ICMS()));

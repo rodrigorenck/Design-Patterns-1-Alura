@@ -28,7 +28,7 @@ public class RegistroDeOrcamento {
         String url = "http://api.externa/orcamento";
         Map<String, Object> dados = Map.of(
                 "valor", orcamento.getValor(),
-                "quantidadeItens", orcamento.getQuantidade()
+                "quantidadeItens", orcamento.getQuantidadeItens()
         );
         //detalhes de infra nao ficam nessa classe - isso eh bom!
         http.post(url, dados);
